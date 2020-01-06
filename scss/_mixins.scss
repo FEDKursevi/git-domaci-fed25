@@ -1,0 +1,10 @@
+@mixin headings {
+    h1 {
+        color: $headingColor;
+        text-align: center;
+    }
+    h5 {
+        color:$headingColor;
+        text-align: center;
+    }
+}
