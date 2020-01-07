@@ -1,0 +1,348 @@
+@import 'variables';
+@import 'mixins';
+
+:root {
+    font-family: $fontMain;
+    font-size: 16px;
+}
+
+.navigation {
+    background-color: $colorHeading;
+    @include breakpoint(medium-size) {
+        @include clearfix();
+    }
+    
+    &__item {
+        @include breakpoint(medium-size) {
+            float: left;
+        }
+    }
+    
+    &__link {
+        display: block;
+        color: $colorFont2;
+        background-color: $colorHeading;
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 1.1rem 2rem;
+
+        &:hover {
+            background-color: $colorAccent;
+        }
+       
+        &_accent {
+            background-color: $colorAccent;
+            text-decoration: underline;
+            font-size: 1rem;
+            text-align: left;
+            padding: 1rem 2rem;
+            @include breakpoint(large-size) {
+                padding-right: 6rem;
+            }
+        }
+    }
+}
+
+.heading {
+    text-align: center;
+
+    &_x-small {
+        margin-bottom: 3rem;
+    }
+
+    &_small {
+        font-size: 1rem;
+        color: $colorFont2;
+        @include breakpoint(medium-size) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &_medium {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $colorHeading;
+        margin-bottom: 3rem;
+        @include breakpoint(medium-size) {
+            font-size: 2rem;
+        }
+    }
+
+    &_big {
+        font-size: 2rem;
+        color: $colorFont2;
+        @include breakpoint(medium-size) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.hero {
+    background-color: $colorNeutral3;
+    padding: 1rem;
+    @include breakpoint(medium-size) {
+        position: relative;
+        height: 95vh;
+        background-image: url(../slike/intro.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__content {
+        @include breakpoint(medium-size) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            padding: 0.5rem;
+            background-color: rgba($color: $colorHeading, $alpha: 0.5);
+        }
+
+        @include breakpoint(large-size) {
+            top: 70%;
+        }
+    }
+}
+
+.button-bar {
+    text-align: center;
+    padding: 1.2rem;
+    @include breakpoint(medium-size) {
+        text-align: right;
+    }
+
+    &__button {
+        &:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+        @include breakpoint(medium-size) {
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            &:last-child {
+                margin-right: 15%;
+            }
+        }
+        @include breakpoint(large-size) {
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}
+
+.button {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 0.8em 1.2em;
+    border: 1px solid $colorFont1;
+    border-radius: 1.4em;
+    color: $colorFont1;
+
+    &:hover {
+        background-color: $colorFont1;
+        color: $colorFont2;
+    }
+}
+
+.album {
+    padding: 3rem 1rem;
+    background-color: $colorNeutral2;
+    @include breakpoint(medium-size) {
+        padding-left: 15%;
+        padding-right: 15%;
+        @include clearfix();
+    }
+
+    &__card {
+        width: 100%;
+        height: $albumCardHeight;
+        background-size: cover;
+        @include breakpoint(medium-size) {
+            float: left;
+            width: 49%;
+            height: $albumCardHeight * 1.2;
+            &:nth-child(odd) {
+                margin-right: 2%;
+            }
+        }
+        @include breakpoint(large-size) {
+            float: left;
+            width: 21%;
+            height: $albumCardHeight * 1.5;
+            &:not(:nth-child(4n)) {
+                margin-right: 2%;
+            }
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 1rem;        
+        }
+
+        &:hover .card__text {
+            visibility: visible;
+        }
+    }
+}
+
+@for $i from 1 through 6 {
+    .album__card:nth-child(#{$i}) {
+        background-image: url('../slike/#{$i}.jpg');
+    }
+}
+
+.card__text {
+    visibility: hidden;
+    height: 40%;
+    background-color: rgba($color: $colorFont2, $alpha: 0.5);
+    padding: 0.5rem;
+}
+
+.pricing {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    text-align: center;
+
+    &__button {
+        margin: 0 auto;
+        @include breakpoint(medium-size) {
+            display: none;
+        }
+    }
+    
+    &__table {
+        margin: 0 auto;
+    }
+}
+
+.table {
+    display: none;
+}
+
+@include breakpoint(medium-size) {
+    .table {
+        display: table;
+        border-collapse: collapse;
+        width: 70%;
+        @include breakpoint(large-size) {
+            width: 45rem;
+        }
+        
+        &__cell {
+            border: 1px solid $colorFont1;
+            padding: 0.5rem;
+            
+            &_empty {
+                border: none;
+            }
+
+            &_accent {
+                background-color: $colorAccent;
+                color: $colorFont2;
+            }
+
+            &_neutral {
+                background-color: $colorHeading;
+                color: $colorFont2;
+            }
+        }
+    }
+}
+
+.contact {
+    padding: 3rem 1rem;
+    background-color: $colorNeutral2;
+    @include breakpoint(medium-size) {
+        @include clearfix();
+        padding: 3rem 15%;
+    }
+
+    &__map {
+        margin: 0 auto;
+        @include breakpoint(large-size) {
+            margin-right: 5%;
+        }
+
+    }
+
+    &__form {
+        margin: 2rem auto 0;
+        @include breakpoint(large-size) {
+            margin-top: 0;
+        }
+    }
+}
+
+.map {
+    display: block;
+    width: 85%;
+    height: 15rem;
+    @include breakpoint(medium-size) {
+        width: 60%;
+        height: 15rem;
+    }
+    @include breakpoint(large-size) {
+        float: left;
+        width: 30%;
+    }
+}
+
+.form {
+    padding: 1.2rem;
+    background-color: $colorAccent;
+    @include clearfix();
+    @include breakpoint(medium-size) {
+        width: 100%;
+    }
+    @include breakpoint(large-size) {
+        float: left;
+        width: 65%;
+    }
+
+    &__field {
+        float: left;
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 0.5em;
+        border: none;
+
+        &:not(:last-child) {
+            margin-bottom: 1.2rem;
+        }
+
+        &::placeholder {
+            font-size: 0.8rem;
+            color: $colorFont1;
+        }
+
+        &:focus {
+            outline: 2px solid $colorNeutral1;
+            background-color: $colorNeutral2;
+        }
+
+        @include breakpoint(medium-size) {
+            &:first-child {
+                width: 20%;
+                margin-right: 5%;
+            }
+
+            &:nth-child(2) {
+                width: 75%;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $colorHeading;
+    text-align: center;
+    line-height: 3em;
+    color: $colorFont2;
+
+    &__accent {
+        color: $colorAccent;
+    }
+}

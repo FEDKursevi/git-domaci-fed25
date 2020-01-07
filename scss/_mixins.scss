@@ -1,0 +1,25 @@
+@mixin clearfix() {
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+}
+
+@mixin breakpoint($screenSize) {
+    @if $screenSize == medium-size {
+      @media (min-width: 769px) { @content; }
+    }
+    
+    @else if $screenSize == large-size {
+      @media (min-width: 1025px) { @content; }
+    }
+    
+    @else {
+      @warn "Breakpoint mixin supports: medium-size, large-size";
+    }
+}
+
+@mixin margin-center {
+  margin: 0 auto;
+}

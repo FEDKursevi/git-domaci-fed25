@@ -1,0 +1,386 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.navigation {
+  background-color: #374249;
+}
+@media (min-width: 769px) {
+  .navigation::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+@media (min-width: 769px) {
+  .navigation__item {
+    float: left;
+  }
+}
+.navigation__link {
+  display: block;
+  color: #ffffff;
+  background-color: #374249;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1.1rem 2rem;
+}
+.navigation__link:hover {
+  background-color: #f75311;
+}
+.navigation__link_accent {
+  background-color: #f75311;
+  text-decoration: underline;
+  font-size: 1rem;
+  text-align: left;
+  padding: 1rem 2rem;
+}
+@media (min-width: 1025px) {
+  .navigation__link_accent {
+    padding-right: 6rem;
+  }
+}
+
+.heading {
+  text-align: center;
+}
+.heading_x-small {
+  margin-bottom: 3rem;
+}
+.heading_small {
+  font-size: 1rem;
+  color: #ffffff;
+}
+@media (min-width: 769px) {
+  .heading_small {
+    font-size: 1.5rem;
+  }
+}
+.heading_medium {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #374249;
+  margin-bottom: 3rem;
+}
+@media (min-width: 769px) {
+  .heading_medium {
+    font-size: 2rem;
+  }
+}
+.heading_big {
+  font-size: 2rem;
+  color: #ffffff;
+}
+@media (min-width: 769px) {
+  .heading_big {
+    font-size: 3rem;
+  }
+}
+
+.hero {
+  background-color: #000000;
+  padding: 1rem;
+}
+@media (min-width: 769px) {
+  .hero {
+    position: relative;
+    height: 95vh;
+    background-image: url(../slike/intro.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (min-width: 769px) {
+  .hero__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    padding: 0.5rem;
+    background-color: rgba(55, 66, 73, 0.5);
+  }
+}
+@media (min-width: 1025px) {
+  .hero__content {
+    top: 70%;
+  }
+}
+
+.button-bar {
+  text-align: center;
+  padding: 1.2rem;
+}
+@media (min-width: 769px) {
+  .button-bar {
+    text-align: right;
+  }
+}
+.button-bar__button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+@media (min-width: 769px) {
+  .button-bar__button:not(:last-child) {
+    margin-right: 1rem;
+  }
+  .button-bar__button:last-child {
+    margin-right: 15%;
+  }
+}
+@media (min-width: 1025px) {
+  .button-bar__button:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+
+.button {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.8em 1.2em;
+  border: 1px solid #797979;
+  border-radius: 1.4em;
+  color: #797979;
+}
+.button:hover {
+  background-color: #797979;
+  color: #ffffff;
+}
+
+.album {
+  padding: 3rem 1rem;
+  background-color: #f3f7f9;
+}
+@media (min-width: 769px) {
+  .album {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .album::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+.album__card {
+  width: 100%;
+  height: 12rem;
+  background-size: cover;
+}
+@media (min-width: 769px) {
+  .album__card {
+    float: left;
+    width: 49%;
+    height: 14.4rem;
+  }
+  .album__card:nth-child(odd) {
+    margin-right: 2%;
+  }
+}
+@media (min-width: 1025px) {
+  .album__card {
+    float: left;
+    width: 21%;
+    height: 18rem;
+  }
+  .album__card:not(:nth-child(4n)) {
+    margin-right: 2%;
+  }
+}
+.album__card:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.album__card:hover .card__text {
+  visibility: visible;
+}
+
+.album__card:nth-child(1) {
+  background-image: url("../slike/1.jpg");
+}
+
+.album__card:nth-child(2) {
+  background-image: url("../slike/2.jpg");
+}
+
+.album__card:nth-child(3) {
+  background-image: url("../slike/3.jpg");
+}
+
+.album__card:nth-child(4) {
+  background-image: url("../slike/4.jpg");
+}
+
+.album__card:nth-child(5) {
+  background-image: url("../slike/5.jpg");
+}
+
+.album__card:nth-child(6) {
+  background-image: url("../slike/6.jpg");
+}
+
+.card__text {
+  visibility: hidden;
+  height: 40%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem;
+}
+
+.pricing {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.pricing__button {
+  margin: 0 auto;
+}
+@media (min-width: 769px) {
+  .pricing__button {
+    display: none;
+  }
+}
+.pricing__table {
+  margin: 0 auto;
+}
+
+.table {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .table {
+    display: table;
+    border-collapse: collapse;
+    width: 70%;
+  }
+}
+@media (min-width: 769px) and (min-width: 1025px) {
+  .table {
+    width: 45rem;
+  }
+}
+@media (min-width: 769px) {
+  .table__cell {
+    border: 1px solid #797979;
+    padding: 0.5rem;
+  }
+  .table__cell_empty {
+    border: none;
+  }
+  .table__cell_accent {
+    background-color: #f75311;
+    color: #ffffff;
+  }
+  .table__cell_neutral {
+    background-color: #374249;
+    color: #ffffff;
+  }
+}
+.contact {
+  padding: 3rem 1rem;
+  background-color: #f3f7f9;
+}
+@media (min-width: 769px) {
+  .contact {
+    padding: 3rem 15%;
+  }
+  .contact::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+.contact__map {
+  margin: 0 auto;
+}
+@media (min-width: 1025px) {
+  .contact__map {
+    margin-right: 5%;
+  }
+}
+.contact__form {
+  margin: 2rem auto 0;
+}
+@media (min-width: 1025px) {
+  .contact__form {
+    margin-top: 0;
+  }
+}
+
+.map {
+  display: block;
+  width: 85%;
+  height: 15rem;
+}
+@media (min-width: 769px) {
+  .map {
+    width: 60%;
+    height: 15rem;
+  }
+}
+@media (min-width: 1025px) {
+  .map {
+    float: left;
+    width: 30%;
+  }
+}
+
+.form {
+  padding: 1.2rem;
+  background-color: #f75311;
+}
+.form::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+@media (min-width: 769px) {
+  .form {
+    width: 100%;
+  }
+}
+@media (min-width: 1025px) {
+  .form {
+    float: left;
+    width: 65%;
+  }
+}
+.form__field {
+  float: left;
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 0.5em;
+  border: none;
+}
+.form__field:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+.form__field::placeholder {
+  font-size: 0.8rem;
+  color: #797979;
+}
+.form__field:focus {
+  outline: 2px solid #cfd1d3;
+  background-color: #f3f7f9;
+}
+@media (min-width: 769px) {
+  .form__field:first-child {
+    width: 20%;
+    margin-right: 5%;
+  }
+  .form__field:nth-child(2) {
+    width: 75%;
+  }
+}
+
+.footer {
+  background-color: #374249;
+  text-align: center;
+  line-height: 3em;
+  color: #ffffff;
+}
+.footer__accent {
+  color: #f75311;
+}
+
+/*# sourceMappingURL=main.css.map */
