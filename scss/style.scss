@@ -187,3 +187,14 @@ nav {
         }
     }
 }
+
+// FOOTER STILOVI
+footer {
+    font-size: 8px;
+    color: white;
+    background-color: $color-bkg-blue-dark;
+    padding: 10px;
+    span {
+        color: $color-bkg-orange;
+    }
+}
