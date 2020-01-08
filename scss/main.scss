@@ -1,0 +1,177 @@
+@import 'vars';
+@import 'mixins';
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: $fontFamily;
+	@include boxSizing;
+}
+
+header {
+	background-color: $main-background-color;
+	color: $text-svetla;
+}
+
+.header{
+	display: inline-block;
+	background-color: $contrast-color-header;
+	width: 250px;
+	background-image: url(../slike/location.png);
+	background-position: left;
+	background-size: 50px;
+	background-repeat: no-repeat;
+
+	p{
+		display: inline-block;
+		text-align: center;
+		size: 50px;
+		text-decoration: underline;
+		padding: 15px 50px;
+	}
+}
+
+.navigacija{
+	display: inline-block;
+}
+
+nav {
+	width: 100%;
+	height: auto;
+	text-align: left;
+	display: flex;
+	
+	ul {
+		list-style: none;
+
+		li {
+			display: inline-block;
+			padding: 10px;
+
+			a {
+				text-decoration: none;
+				color: $text-svetla;
+
+				&:hover { color: $hover-na-dugmice;
+						  text-decoration: underline;
+						 }
+			}
+		}
+	}
+}
+
+.uvod{
+	text-align: center;
+	color: $text-svetla;
+	background-image: url(../slike/intro.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 1280px 600px;
+	height: 31em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.uvod-centar{
+	background: rgba(54, 49, 49, 0.5);	
+	max-width: 50%;
+	margin-top: 200px;
+    padding: 0 100px;
+}
+
+
+.selekcija{
+	text-align: right;
+	padding: 10px 100px;
+
+	select{
+		border-radius: 18px;
+		list-style: none;
+		color: $boja-fonta;
+		padding: 10px 10px 10px 10px; 
+		@include select-appearance;
+	}
+
+	form{
+		padding: 0 220px 0 0;
+	}
+}
+
+.ponude{
+	background-color: $pozadina-sekcija;
+	margin: 0 auto;
+
+	.ponuda{
+		background-color: $pozadina-sekcija;
+		margin: 0 auto;
+		display: flex;
+		justify-content: left;
+		align-content: center;
+		flex-wrap: wrap;
+		padding:50px 100px 20px 100px;
+	}
+
+	.slika{
+		margin: 10px 10px;
+		position: relative;
+	
+		.middle {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+			top: 3%;
+			left: 14%;
+
+			transform: translate(-20%, -20%);
+			-ms-transform: translate(-20%, -20%)
+		}
+
+		&:hover .middle {
+			opacity: 1;
+		  }
+	}
+
+	.text {
+		background-color:rgba(243, 236, 236, 0.767);
+		color: $text-najtamnija;
+		font-size: 32px;
+		padding: 10px 10px;
+		text-align: left;
+		width: inherit;
+	}
+
+	img{
+		height: 100%;
+		width: 100%;
+	}
+}
+
+
+
+  
+
+
+footer {
+	display: flex;
+	justify-content: center;
+	background-color: $main-background-color;
+	.copyright{
+		color: $text-svetla;
+		padding-right: 0.3em;
+	}
+	.name{
+		color: $contrast-Color;
+	}
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+	main{
+		width: 100%;
+	}
+}
