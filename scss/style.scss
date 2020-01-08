@@ -110,3 +110,26 @@ nav {
         background-color: $color-bkg-hover;
     }
 }
+
+.img-container {
+    background-color: $color-bkg-section-gray-light;
+    padding: 40px 0;
+    figure {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+        max-width: 95%;
+        padding: 10px 0;
+        .transparent {
+            position: absolute;
+            width: 100%;
+            background-color: rgba(255,255,255,0.5);
+            p {
+                color: black;
+                text-align: left;
+                padding: 10px 10px 30px;
+            }
+        }
+    }
+}
