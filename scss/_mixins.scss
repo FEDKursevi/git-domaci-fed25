@@ -9,13 +9,3 @@
 	-moz-appearance: none;
 	appearance: none;
 }
-
-@mixin clearfix {
-	&:before, &:after {
-	    content: "";
-	    display: block;
-	}
-	&:after {
-	    clear: both;
-	}
-}
