@@ -1,3 +1,14 @@
+h1 {
+  color: #ffff;
+  text-align: center; }
+
+h2 {
+  text-align: center; }
+
+h5 {
+  color: #ffff;
+  text-align: center; }
+
 * {
   box-sizing: border-box; }
 
@@ -17,6 +28,8 @@ nav {
         padding: 15px;
         text-decoration: none;
         color: #ffff; }
+        nav ul li a:hover {
+          text-decoration: underline; }
 
 nav div.menu-location {
   list-style-type: none;
@@ -52,8 +65,148 @@ div.title {
   div.title h1 {
     color: #ffff;
     text-align: center; }
+  div.title h2 {
+    text-align: center; }
   div.title h5 {
     color: #ffff;
     text-align: center; }
+
+/* section - button */
+div.bckg1 {
+  background-color: #ffff; }
+
+div.button-section {
+  margin-right: 15%;
+  margin-top: 3%;
+  text-align: right; }
+
+button {
+  background-color: #ffff;
+  border: 1px solid #737373;
+  padding: 20px;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 4%; }
+  button:hover {
+    background-color: #929496;
+    color: #ffff; }
+
+/* section - images */
+div.sectionImg {
+  background-color: #f3f7f9; }
+  div.sectionImg figure {
+    margin-top: 3%;
+    padding-top: 5%;
+    padding-bottom: 5%; }
+    div.sectionImg figure img {
+      height: auto;
+      width: 20%;
+      margin-right: 2%; }
+
+div.img1 {
+  text-align: center; }
+
+div.img2 {
+  margin-top: 1%;
+  margin-left: 5.5%; }
+
+/* section table */
+div.wrapper {
+  padding-top: 2%; }
+
+table {
+  border-collapse: collapse;
+  width: 60%; }
+  table th {
+    background-color: #f75311;
+    color: #ffffff; }
+
+table, th, td {
+  border: 1px solid #000000;
+  height: 30px;
+  text-align: center; }
+
+.section-title p {
+  text-align: center;
+  color: #757571; }
+
+.backgroundRow {
+  background-color: #262624;
+  color: #ffffff; }
+
+.removed {
+  background-color: #ffffff;
+  border-color: #ffffff; }
+
+/* section-contact */
+form {
+  padding: 10px; }
+
+div.section-contact {
+  background-color: #f3f7f9;
+  margin-top: 3%;
+  padding-top: 15px; }
+
+div.wrapper {
+  width: 50%;
+  margin: auto; }
+
+div.section-form {
+  background-color: #f75311;
+  width: 70%; }
+
+.chose {
+  margin-left: 2%;
+  padding: 5px; }
+
+.input-name {
+  margin-left: 3%;
+  width: 80%;
+  margin-top: 3%;
+  padding: 5px; }
+
+.input-email {
+  margin-left: 2%;
+  padding: 5px;
+  width: 95%; }
+
+textarea {
+  margin-left: 2%; }
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 250px;
+  width: 300px; }
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 250px;
+  width: 300px; }
+
+/* develop contact us form*/
+div.wrapper {
+  width: 85%;
+  display: flex;
+  justify-content: space-between; }
+
+div.section-form {
+  width: 100%; }
+
+div.section-wrapper {
+  width: 50%;
+  margin-right: 15%; }
+
+/* footer */
+.background-footer {
+  background-color: #262624;
+  margin-top: 3%; }
+
+.footer-text {
+  text-align: center; }
+  .footer-text p {
+    display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */
