@@ -69,6 +69,9 @@ nav {
         li {
             padding: 10px 0;
             font-size: 8px;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     a {
@@ -129,6 +132,7 @@ nav {
         max-width: 95%;
         padding: 10px 0;
         .transparent {
+            display: none;
             position: absolute;
             width: 100%;
             background-color: rgba(255,255,255,0.5);
@@ -136,6 +140,11 @@ nav {
                 color: black;
                 text-align: left;
                 padding: 10px 10px 30px;
+            }
+        }
+        &:hover {
+            .transparent {
+                display: inline-block;
             }
         }
     }
