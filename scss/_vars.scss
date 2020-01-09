@@ -1,5 +1,6 @@
 $headingColor: #ffff;
 $colorTable: #ffffff;
+$colorHover: #ffff;
 
 $backgroundNavBar: #374249;
 $background1: #ffff;
@@ -9,7 +10,14 @@ $backgroundTable1: #f75311;
 $backgroundTable2: #262624;
 $backgroundSectionForm: #f75311;
 $background-footer: #262624;
+$backgroundHover: #929496;
 
 $padding: 15px;
 
 $margin-top: 3%;
+
+// Small devices (landscape phones, 576px and up)
+$sm: 576px;
+
+// Medium devices (tablets, 768px and up)
+$md: 768px;

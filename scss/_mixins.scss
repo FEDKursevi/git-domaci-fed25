@@ -2,14 +2,24 @@
     h1 {
         color: $headingColor;
         text-align: center;
+        @media screen and (max-width: $sm) {
+            font-size: 25px;
+        }
     }
     
     h2 {
         text-align: center;
+        @media screen and (max-width: $sm) {
+            font-size: 15px;
+        }
     }
 
     h5 {
         color:$headingColor;
         text-align: center;
+        @media screen and (max-width: $sm) {
+            font-size: 10px;
+        }
+        
     }
 }

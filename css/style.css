@@ -1,17 +1,32 @@
 h1 {
   color: #ffff;
   text-align: center; }
+  @media screen and (max-width: 576px) {
+    h1 {
+      font-size: 25px; } }
 
 h2 {
   text-align: center; }
+  @media screen and (max-width: 576px) {
+    h2 {
+      font-size: 15px; } }
+  @media screen and (max-width: 576px) {
+    h2 {
+      font-size: 10px; } }
 
 h5 {
   color: #ffff;
   text-align: center; }
+  @media screen and (max-width: 576px) {
+    h5 {
+      font-size: 10px; } }
 
 * {
   box-sizing: border-box; }
 
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0; } }
 /* header */
 nav {
   background-color: #2c2c2e; }
@@ -23,6 +38,11 @@ nav {
     nav ul li {
       float: left;
       padding-right: 1%; }
+      @media (max-width: 576px) {
+        nav ul li {
+          width: 100%;
+          text-align: center;
+          font-size: 13px; } }
       nav ul li a {
         display: block;
         padding: 15px;
@@ -41,19 +61,34 @@ nav div.menu-location {
   width: 18%;
   height: 78px;
   text-decoration: none; }
+  @media (max-width: 768px) {
+    nav div.menu-location {
+      width: 25%; } }
+  @media (max-width: 576px) {
+    nav div.menu-location {
+      width: 100%; } }
   nav div.menu-location a {
     color: #ffff;
     display: flex;
     align-items: center; }
     nav div.menu-location a img {
-      height: 45px; }
+      height: 45px;
+      font-size: 15px; }
 
+@media (max-width: 576px) {
+  header .backgroundImage {
+    position: relative; } }
 header div.bckg-img {
   background-image: url("../slike/intro.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: auto;
   height: 545px; }
+  @media screen and (max-width: 576px) {
+    header div.bckg-img {
+      background-image: none;
+      background-color: black;
+      height: 150px; } }
 
 div.title {
   position: absolute;
@@ -65,11 +100,26 @@ div.title {
   div.title h1 {
     color: #ffff;
     text-align: center; }
+    @media screen and (max-width: 576px) {
+      div.title h1 {
+        font-size: 25px; } }
   div.title h2 {
     text-align: center; }
+    @media screen and (max-width: 576px) {
+      div.title h2 {
+        font-size: 15px; } }
+    @media screen and (max-width: 576px) {
+      div.title h2 {
+        font-size: 10px; } }
   div.title h5 {
     color: #ffff;
     text-align: center; }
+    @media screen and (max-width: 576px) {
+      div.title h5 {
+        font-size: 10px; } }
+  @media (max-width: 576px) {
+    div.title {
+      top: 50%; } }
 
 /* section - button */
 div.bckg1 {
@@ -79,6 +129,9 @@ div.button-section {
   margin-right: 15%;
   margin-top: 3%;
   text-align: right; }
+  @media screen and (max-width: 576px) {
+    div.button-section {
+      margin: 3% auto; } }
 
 button {
   background-color: #ffff;
@@ -88,6 +141,14 @@ button {
   text-align: center;
   cursor: pointer;
   margin-left: 4%; }
+  @media screen and (max-width: 576px) {
+    button {
+      padding: 3px;
+      margin: 1% 2%; } }
+  @media screen and (max-width: 768px) {
+    button {
+      padding: 10px;
+      margin: 0 1%; } }
   button:hover {
     background-color: #929496;
     color: #ffff; }
@@ -103,6 +164,13 @@ div.sectionImg {
       height: auto;
       width: 20%;
       margin-right: 2%; }
+      @media screen and (max-width: 768px) {
+        div.sectionImg figure img {
+          width: 35%; } }
+      @media screen and (max-width: 576px) {
+        div.sectionImg figure img {
+          width: 100%;
+          margin: 2%; } }
 
 div.img1 {
   text-align: center; }
@@ -110,6 +178,14 @@ div.img1 {
 div.img2 {
   margin-top: 1%;
   margin-left: 5.5%; }
+  @media (max-width: 768px) {
+    div.img2 {
+      margin: 0;
+      width: 100%;
+      text-align: center; } }
+  @media (max-width: 576px) {
+    div.img2 {
+      margin: unset; } }
 
 /* section table */
 div.wrapper {
@@ -126,10 +202,23 @@ table, th, td {
   border: 1px solid #000000;
   height: 30px;
   text-align: center; }
+  @media screen and (max-width: 576px) {
+    table, th, td {
+      display: none; } }
+
+div.button-sm {
+  display: none; }
+  @media screen and (max-width: 576px) {
+    div.button-sm {
+      display: block;
+      text-align: center; } }
 
 .section-title p {
   text-align: center;
   color: #757571; }
+  @media screen and (max-width: 576px) {
+    .section-title p {
+      font-size: 13px; } }
 
 .backgroundRow {
   background-color: #262624;
@@ -149,64 +238,113 @@ div.section-contact {
   padding-top: 15px; }
 
 div.wrapper {
-  width: 50%;
-  margin: auto; }
-
-div.section-form {
-  background-color: #f75311;
-  width: 70%; }
+  margin: auto;
+  width: 85%;
+  display: flex;
+  justify-content: space-between; }
+  @media screen and (max-width: 576px) {
+    div.wrapper {
+      width: 100%;
+      display: block; } }
+  @media (max-width: 768px) {
+    div.wrapper {
+      display: unset; } }
 
 .chose {
   margin-left: 2%;
   padding: 5px; }
+  @media screen and (max-width: 576px) {
+    .chose {
+      width: 95%; } }
 
 .input-name {
   margin-left: 3%;
   width: 80%;
   margin-top: 3%;
   padding: 5px; }
+  @media screen and (max-width: 576px) {
+    .input-name {
+      width: 95%; } }
 
 .input-email {
   margin-left: 2%;
   padding: 5px;
   width: 95%; }
+  @media screen and (max-width: 576px) {
+    .input-email {
+      width: 95%; } }
 
 textarea {
   margin-left: 2%; }
+  @media screen and (max-width: 576px) {
+    textarea {
+      width: 95%; } }
 
 .mapouter {
   position: relative;
   text-align: right;
   height: 250px;
   width: 300px; }
+  @media screen and (max-width: 768px) {
+    .mapouter {
+      margin: auto; } }
 
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
   height: 250px;
   width: 300px; }
+  @media screen and (max-width: 576px) {
+    .gmap_canvas {
+      width: 100%; } }
 
 /* develop contact us form*/
 div.wrapper {
   width: 85%;
   display: flex;
   justify-content: space-between; }
+  @media screen and (max-width: 576px) {
+    div.wrapper {
+      width: 100%;
+      display: block; } }
+  @media (max-width: 768px) {
+    div.wrapper {
+      display: unset; } }
 
-div.section-form {
-  width: 100%; }
-
-div.section-wrapper {
+.section-wrapper {
   width: 50%;
   margin-right: 15%; }
+  @media (max-width: 768px) {
+    .section-wrapper {
+      margin: 0 auto;
+      width: 70%; } }
+  @media (max-width: 576px) {
+    .section-wrapper {
+      width: 100%; } }
+  .section-wrapper .section-form {
+    background-color: #f75311;
+    width: 100%; }
+    @media screen and (max-width: 576px) {
+      .section-wrapper .section-form {
+        width: 180%;
+        margin-top: 10%;
+        margin-left: 10%;
+        text-align: center; } }
+    @media (max-width: 768px) {
+      .section-wrapper .section-form {
+        width: 100%;
+        margin: 3% 0; } }
 
 /* footer */
 .background-footer {
   background-color: #262624;
   margin-top: 3%; }
-
-.footer-text {
-  text-align: center; }
-  .footer-text p {
-    display: inline-block; }
+  .background-footer .footer-text {
+    text-align: center; }
+    .background-footer .footer-text p {
+      display: inline-block; }
+      @media screen and (max-width: 576px) {
+        .background-footer .footer-text p {
+          font-size: 13px; } }
 
 /*# sourceMappingURL=style.css.map */

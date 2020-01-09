@@ -4,6 +4,13 @@
 @include headings;
 * {
     box-sizing: border-box;
+    
+}
+
+@media screen and (max-width: $md) {
+    body {
+        margin:0;
+    }
 }
 
 /* header */ 
@@ -17,6 +24,11 @@ nav {
         li {
             float: left;
             padding-right: 1%;
+            @media (max-width: $sm) { 
+                width: 100%;
+                text-align: center;
+                font-size: 13px;
+            }
             a {
                 display: block;
                 padding: $padding;
@@ -39,24 +51,44 @@ nav div.menu-location {
     width: 18%;
     height: 78px;
     text-decoration: none;
+    @media (max-width: $md) { 
+        width: 25%;
+    }
+    @media (max-width: $sm) { 
+        width: 100%;
+    }
     a{
         color: #ffff;
         display: flex;
         align-items: center;
         img {
             height: 45px;
+            font-size: 15px;
         }
     }
 }
-header div.bckg-img {
-    background-image: url('../slike/intro.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: auto;
-    height: 545px;
-  }
+header {
+    @media (max-width: $sm) {
+        .backgroundImage {
+            position: relative;
+        }
+    }
+    
+    div.bckg-img {
+        background-image: url('../slike/intro.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: auto;
+        height: 545px;
+        @media screen  and (max-width: $sm) {
+            background-image: none;
+            background-color: black;
+            height: 150px;
+        }
+    }
+}
 
-  div.title {
+div.title {
     position: absolute;
     top: 74%;
     left: 50%;
@@ -64,6 +96,9 @@ header div.bckg-img {
     transform: translate(-50%, -50%);
     @include headings;
     background-color: rgba(0, 0, 0, 0.5);
+    @media (max-width: $sm) {
+        top: 50%;
+    }
   }
 
 /* section - button */ 
@@ -74,6 +109,9 @@ div.button-section {
     margin-right: 15%;
     margin-top: $margin-top;
     text-align: right;
+    @media screen  and (max-width: $sm) {
+        margin: $margin-top auto;
+    }
 }
 button {
     background-color: $backgroundButton;
@@ -83,9 +121,17 @@ button {
     text-align: center;
     cursor: pointer;
     margin-left: 4%;
+    @media screen  and (max-width: $sm) {
+        padding: 3px;
+        margin: 1% 2%;
+    }
+    @media screen  and (max-width: $md) {
+        padding: 10px;
+        margin: 0 1%;
+    }
     &:hover {
-        background-color: #929496;
-        color: #ffff;
+        background-color: $backgroundHover;
+        color: $colorHover;
         }
 }
 /* section - images */
@@ -99,6 +145,13 @@ div.sectionImg {
             height: auto;
             width: 20%;
             margin-right: 2%;
+            @media screen  and (max-width: $md) {
+                width: 35%;
+            }
+            @media screen  and (max-width: $sm) {
+                width: 100%;
+                margin: $margin-top - 1 ;
+            } 
        }
     }
 }
@@ -108,6 +161,14 @@ div.img1 {
 div.img2 {
     margin-top: 1%;
     margin-left: 5.5%;
+    @media (max-width: $md) { 
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    @media (max-width: $sm) {
+        margin: unset;
+    }
 }
 
 /* section table */
@@ -128,12 +189,25 @@ table, th, td {
     border: 1px solid #000000;
     height: 30px;
     text-align: center;
+    @media screen  and (max-width: $sm) {
+        display: none;        
+    }
+}
+div.button-sm {
+    display: none;
+    @media screen  and (max-width: $sm) {
+        display: block;
+        text-align: center;
+    }
 }
 
 .section {
     &-title p {
         text-align: center;
         color: #757571;
+        @media screen  and (max-width: $sm) {
+            font-size: 13px;
+        }
     }
 }
 .backgroundRow {
@@ -155,60 +229,112 @@ div.section-contact {
     padding-top: 15px
 }
 div.wrapper {
-    width: 50%;
     margin: auto;
-}
-div.section-form {
-    background-color: $backgroundSectionForm;
-    width: 70%; 
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    @media screen  and (max-width: $sm) {
+        width: 100%; 
+        display: block; 
+    }
+    @media (max-width: $md) {
+        display: unset;
+    }
 }
 .chose {
     margin-left: 2%;
     padding: 5px;
+    @media screen  and (max-width: $sm) {
+        width: 95%; 
+    }
 }
 .input-name {
     margin-left: 3%;
     width: 80%;
     margin-top: $margin-top;
     padding: 5px;
+    @media screen  and (max-width: $sm) {
+        width: 95%; 
+    }
 }    
 .input-email {
     margin-left: 2%;
     padding: 5px;
     width: 95%;
+    @media screen  and (max-width: $sm) {
+        width: 95%; 
+    }
 }
 textarea {
     margin-left: 2%;
+    @media screen  and (max-width: $sm) {
+        width: 95%; 
+    }
 }
 
-.mapouter{position:relative;text-align:right;height:250px;width:300px;}
-.gmap_canvas {overflow:hidden;background:none!important;height:250px;width:300px;}
+.mapouter{position:relative;text-align:right;height:250px;width:300px;
+    @media screen  and (max-width: $md) {
+        margin: auto;
+    }
+}
+.gmap_canvas {overflow:hidden;background:none!important;height:250px;width:300px;
+    @media screen  and (max-width: $sm) {
+        width: 100%;
 
+    }
+}
 /* develop contact us form*/
 div.wrapper {
     width: 85%;
     display: flex;
     justify-content: space-between;
+    @media screen  and (max-width: $sm) {
+        width: 100%; 
+        display: block; 
+    }
+    @media (max-width: $md) {
+        display: unset;
+    }
 }
 
-div.section-form {
-    width: 100%;
-}
-div.section-wrapper {
+.section-wrapper {
     width: 50%;
     margin-right: 15%;
+    @media (max-width: $md) {
+        margin: 0 auto;
+        width: 70%;
+    }  
+    @media (max-width: $sm) {
+        width: 100%;
+    } 
+    
+    .section-form {
+        background-color: $backgroundSectionForm;
+        width: 100%; 
+        @media screen  and (max-width: $sm) {
+            width: 180%;
+            margin-top: 10%; 
+            margin-left: 10%;
+            text-align: center;
+        }
+        @media (max-width: $md) {
+            width: 100%;
+            margin: $margin-top 0;
+        }
+     }
 }
-
 /* footer */
-
 .background-footer {
     background-color: $background-footer;
     margin-top: $margin-top;
-}
 
-.footer-text {
-    text-align: center;
-    p {
-        display: inline-block;
+    .footer-text {
+        text-align: center;
+        p {
+            display: inline-block;
+            @media screen  and (max-width: $sm) {
+                font-size: 13px;
+            }
+        }
     }
 }
