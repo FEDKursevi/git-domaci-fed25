@@ -1,0 +1,1 @@
+Obrisati "../" iz image url u scss fajlu, rekompajlirati i onda je stranica savršena i kako treba (govoreći u odnosu na master granu)
