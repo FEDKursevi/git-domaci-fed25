@@ -1,1 +1,1 @@
-Obrisati "../" iz image url u scss fajlu, rekompajlirati i onda je stranica savršena i kako treba (govoreći u odnosu na master granu)
+Obrisati "../" iz image url kod definisanja stilova za intro klasu, kao i u for petlji za 6 manjih slik u scss fajlu, rekompajlirati css i onda je stranica savršena i kako treba (govoreći u odnosu na master granu)
