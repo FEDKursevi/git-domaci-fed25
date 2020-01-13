@@ -233,3 +233,214 @@ section {
 		}
 	}
 }
+
+.button {
+	padding: 1em 2em;
+	border-radius: 60px;
+	color: $main_text_color;
+	border: 1px solid $grey_light;
+	margin: 0 1em;
+	cursor: pointer;
+
+	&:hover {
+		background: $grey_light;
+		color: #fff;
+	}
+}
+
+.contact {
+	background-color: $grey_light;
+
+	div {
+		display: inline-block;
+	}
+
+	h1 {
+		font-size: 2em;
+		text-align: center;
+		color: $main_dark;
+		text-transform: uppercase;
+		margin-bottom: 1.5em;
+	}
+}
+
+.contact {
+	background: $section_grey;
+
+	.mapHolder {
+		float: left;
+		margin: 1em;
+		width: 30%;
+
+		iframe {
+			width: 100%;
+		}
+	}
+
+	form {
+		width: 60%;
+		margin: 1em;
+		float: right;
+		padding: 1em;
+		background: $main_orange;
+
+		.contactInput {
+			float: left;
+			padding: .5em;
+			color: $main_dark;
+			border: none;
+			margin: 1em;
+		}
+
+		select {
+			width: 20%;
+		}
+
+		.contactInput[type="text"] {
+			float: right;
+			width: 70%;
+		}
+
+		.contactInput[type="email"] {
+			width: 96%;
+		}
+
+		textarea.contactInput {
+			width: 96%;
+		}
+	}
+}
+
+footer {
+	padding: 1em;
+	text-align: center;
+	width: 100%;
+	background: $main_dark;
+	color: #fff;
+
+	span {
+		color: $main_orange;
+	}
+}
+
+
+@media screen and (max-width: 1200px) {
+	.third-section {
+		a {
+			display: inline-block;
+			width: 30%;
+			margin-left: 10%;
+		}
+	}
+
+	.contact {
+
+		.mapHolder {
+			width: 50%;
+			float: none;
+			margin: 1em auto;
+		}
+
+		form {
+			width: 100%;
+		}
+	}
+
+}
+
+@media screen and (max-width: 670px) {
+	header {
+		.location {
+			width: 100%;
+		}
+
+		nav {
+			width: 100%;
+			height: auto;
+
+			ul {
+				li {
+					width: 100%;
+					text-align: center;
+					padding: 1em;
+				}
+			}
+		}
+	}
+
+	section {
+		padding: 3em 1em;
+	}
+
+	.hero {
+		background: #000;
+		height: auto;
+
+	}
+
+	.text-bg {
+		background: none;
+
+	}
+
+
+	.third-section {
+
+		margin: 0;
+		padding-left: 15%;
+
+		a {
+			display: block;
+			width: 100%;
+
+			&:hover {
+				width: 70%;
+			}
+		}
+	}
+
+	.slike {
+		margin: 1em auto;
+		width: 100%;
+
+		.img-content {
+			display: block;
+		}
+
+	}
+
+
+
+
+
+
+
+	.table-pricing {
+		display: none;
+	}
+
+	.pricingButton {
+		display: inline-block;
+		margin-top: 2em;
+	}
+
+
+
+	.contact {
+		
+		.mapHolder {
+			width: 80%;
+			margin: 3em;
+		}
+		form{
+			margin: 1em 0;
+			.contactInput, .contactInput[type="text"]{
+				width: 96%;
+				float: none;
+			}
+		}
+
+
+	}
+
+}
