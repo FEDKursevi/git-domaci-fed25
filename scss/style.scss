@@ -15,45 +15,53 @@ header {
 	height: 5em;
 	color: #fff;
 
-	.location, nav {
+	.location,
+	nav {
 		padding: 1em 2em;
 	}
 
-	.location{
+	.location {
 		height: 100%;
 		width: 20%;
 		float: left;
 		background-color: $main_orange;
 		text-decoration: underline;
 	}
-	img{
+
+	img {
 		width: 40px;
 		float: left;
 	}
 
-	span{
+	span {
 		font-size: 1.5em;
 		margin-top: 0.3em;
 		float: left;
 	}
 
-	nav{
+	nav {
 		background-color: $main_dark;
 		width: 80%;
 		float: right;
 		height: 100%;
-		ul{
+
+		ul {
 			list-style: none;
 			padding-top: 0.8em;
-			li{
+
+			li {
 				display: inline-block;
 				margin-right: 5em;
 				font-size: 1.2em;
-				a{
+
+				a {
 					color: #fff;
 					text-decoration: none;
 					vertical-align: middle;
-					&:hover { text-decoration: underline; }
+
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 			}
 		}
@@ -61,13 +69,13 @@ header {
 
 }
 
-.hero{
+.hero {
 	background: url('../slike/intro.jpg') no-repeat;
 	background-size: cover;
 	background-position: center;
 	width: 100%;
 	height: auto;
-	
+
 }
 
 
@@ -77,7 +85,7 @@ section {
 	@include clearfix;
 }
 
-.text-bg{
+.text-bg {
 	width: 50%;
 	margin-left: 25%;
 	text-align: center;
@@ -86,7 +94,142 @@ section {
 	padding: 2vh 5vw;
 	background: rgb(114, 113, 113, 0.5);
 	color: #fff;
-	h1{
+
+	h1 {
 		font-size: 3em;
+	}
+}
+
+.second-nav {
+	ul {
+		float: right;
+
+		li {
+			display: inline-block;
+			padding: 15px 30px;
+			margin: 0 15px;
+			border: 1px solid $grey_light;
+			border-radius: 30px;
+			color: $grey_light;
+
+			&:hover {
+				color: white;
+				background-color: $grey_light;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.third-section {
+	background-color: $grey_light;
+
+	a {
+		display: inline-block;
+		width: 20%;
+		margin: 10px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.slika1 {
+	background: url('../slike/1.jpg') no-repeat;
+	width: 100%;
+	height: 40vh;
+}
+
+.slika2 {
+	background: url('../slike/2.jpg') no-repeat;
+	width: 100%;
+	height: 40vh;
+}
+
+.slika3 {
+	background: url('../slike/3.jpg') no-repeat;
+	width: 100%;
+	height: 40vh;
+}
+
+.slika4 {
+	background: url('../slike/4.jpg') no-repeat;
+	width: 100%;
+	height: 40vh;
+}
+
+.slika5 {
+	background: url('../slike/5.jpg') no-repeat;
+	width: 100%;
+	height: 40vh;
+}
+
+.slika6 {
+	background: url('../slike/6.jpg') no-repeat;
+	width: 100%;
+	height: 40vh;
+}
+
+.slike {
+	.img-content {
+		width: 85%;
+		opacity: 0;
+		color: black;
+		font-size: 1em;
+		background: rgb(240, 240, 240, 0.6);
+		overflow: hidden;
+		padding-bottom: 20px;
+
+	}
+
+	&:hover .img-content {
+		opacity: 1;
+	}
+}
+
+.pricing {
+	text-align: center;
+	color: $main_text_color;
+
+	h1 {
+		font-size: 2em;
+		color: $main_dark;
+		text-transform: uppercase;
+		margin-bottom: 1.5em;
+	}
+}
+
+.table-pricing {
+	width: 60%;
+	margin: 3em auto;
+	border-collapse: collapse;
+
+	th,
+	td {
+		padding: .5em;
+	}
+
+	.orange {
+		background: $main_orange;
+		color: #fff;
+	}
+
+	.darkCol {
+		background: $main_dark;
+		color: #fff;
+		font-weight: bold;
+	}
+
+	thead {
+		.darkCol {
+			border-right: 1px solid $main_text_color;
+		}
+	}
+
+	tbody {
+		td {
+			border: 1px solid $main_text_color;
+		}
 	}
 }
